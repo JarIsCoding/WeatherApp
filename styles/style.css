@@ -3,19 +3,28 @@
     src: url(/assets/Roboto/Roboto-Regular.ttf);
 }
 
+@font-face {
+    font-family: robo-t;
+    src: url(/assets/Roboto/Roboto-Thin.ttf);
+}
+
 .bgColor {
     background-color: #222F3F;
 }
 
 .bgImg {
     background-image: url(/assets/sincerely-media-gPnHi8AmO5k-unsplash.jpg);
-    background-size: 70% 9000px;
+    background-size: 75% 9000px;
     background-position: right;
     background-repeat: no-repeat;
 }
 
 .robo {
     font-family: robo;
+}
+
+.robot {
+    font-family: robo-t;
 }
 
 .dwn {
@@ -33,5 +42,39 @@
 }
 
 .padend {
-    padding-right: 70px;
+    padding-right: 60px;
+}
+
+.inputbox {
+    height: 95px;
+    width: 450px;
+}
+
+.inputcolor {
+    background-color: #252525B2;
+    color: #5D5D5D;
+    padding-left: 25px;
+}
+
+.ted {
+    font-size: 280px;
+    color: white;
+}
+
+.oft {
+    font-size: 150px;
+    color: white;
+}
+
+.dwnmore {
+    padding-top: 140px;
+}
+
+.fut {
+    font-size: 40px;
+}
+
+.at {
+    font-size: 80px;
+    color: white;
 }
