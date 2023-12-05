@@ -1,4 +1,4 @@
-import { apikey, apikey2 } from "./enviroment.js"
+import {apikey, apikey2 } from "./enviroment.js"
 
 // IDs
 let UserInput = document.getElementById('UserInput');
