@@ -8,6 +8,16 @@
     src: url(/assets/Roboto/Roboto-Thin.ttf);
 }
 
+@font-face {
+    font-family: robol;
+    src: url(/assets/Roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: robob;
+    src: url(/assets/Roboto/Roboto-Bold.ttf);
+}
+
 .bgColor {
     background-color: #222F3F;
 }
@@ -72,9 +82,56 @@
 
 .fut {
     font-size: 40px;
+    color: white;
 }
 
 .at {
     font-size: 80px;
     color: white;
+}
+
+.white {
+    color: white;
+}
+
+.closeColor {
+    background-color: #37588A;
+}
+
+.openColor {
+    background-color: #3385FF;
+}
+
+.robol {
+    font-family: robol;
+}
+
+.ft {
+    font-size: 50px;
+    color: white;
+}
+
+.padstart {
+    padding-left: 75px;
+}
+
+hr {
+    height: 3px;
+    background-color: white;
+    opacity: 100%;
+}
+
+.robob {
+    font-family: robob;
+}
+
+input {
+    background-image: url(/assets/MagnigifyingGlass.png);
+    background-size: 50px 50px;
+    background-position: 95%;
+    background-repeat: no-repeat;
+}
+
+.dwnmed {
+    padding-top: 115px;
 }
