@@ -1,0 +1,37 @@
+@font-face {
+    font-family: robo;
+    src: url(/assets/Roboto/Roboto-Regular.ttf);
+}
+
+.bgColor {
+    background-color: #222F3F;
+}
+
+.bgImg {
+    background-image: url(/assets/sincerely-media-gPnHi8AmO5k-unsplash.jpg);
+    background-size: 70% 9000px;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.robo {
+    font-family: robo;
+}
+
+.dwn {
+    padding-top: 50px;
+}
+
+.ef {
+    font-size: 85px;
+    color: white;
+}
+
+.trd {
+    font-size: 30px;
+    color: white;
+}
+
+.padend {
+    padding-right: 70px;
+}
