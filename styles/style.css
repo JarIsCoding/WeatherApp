@@ -22,8 +22,15 @@
     background-color: #222F3F;
 }
 
-.bgImg {
-    background-image: url(/assets/sincerely-media-gPnHi8AmO5k-unsplash.jpg);
+.bgDayImg {
+    background-image: url(/assets/WeatherDay.png);
+    background-size: 75% 9000px;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.bgNightImg {
+    background-image: url(/assets/WeatherNight.png);
     background-size: 75% 9000px;
     background-position: right;
     background-repeat: no-repeat;
