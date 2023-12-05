@@ -17,7 +17,7 @@
             <!--Search And Favorites Text-->
             <div class="col-3 robo ps-3 pe-3 pt-5 mt-3 d-flex justify-content-center">
                 <div>
-                    <input type="text" placeholder="Search for a city"
+                    <input id="UserInput" type="text" placeholder="Search for a city"
                         class="inputcolor fut inputbox border border-dark-subtle rounded-4 border-5 robot">
                     <br>
                     <br>
@@ -28,7 +28,7 @@
                     <br>
 
                     <!--Favorite Selection-->
-                    <div class="row openColor rounded-4 robol px-0 mx-0">
+                    <div class="row openColor rounded-4 robol ps-2 pe-2 mx-0">
                         <div class="col-6 pt-3">
                             <p class="fut">
                                 Location
@@ -62,7 +62,7 @@
                     <br>
 
                     <!--Second Favorite Location-->
-                    <div class="row closeColor rounded-4 robol px-0 mx-0">
+                    <div class="row closeColor rounded-4 robol ps-2 pe-2 mx-0">
                         <div class="col-6 pt-3">
                             <p class="fut">
                                 Location
@@ -102,10 +102,10 @@
 
                         <!--Location, Current Day, and Weather-->
                         <div class="row dwn">
-                            <div class="col-6 ef mb-0">
+                            <div id="CurrentCity" class="col ef mb-0">
                                 Location
                             </div>
-                            <div class="col-6 pt-4 ps-4">
+                            <div class="col pt-4 ps-4">
                                 <img src="./assets/kisspng-computer-icons-check-mark-royalty-free-true-or-false-5adb4ad8815827.9386544715243209845298.png"
                                     height="75px" width="75px" class="img-fluid" alt="">
                             </div>
@@ -116,7 +116,7 @@
                             <div class="col-6"><img src="/assets/WhiteSun.png" width="310px" alt="White sun"
                                     class="img-fluid pe-5 pt-5">
                             </div>
-                            <div class="col-6 at dwnmed">
+                            <div id="CurrentWeather" class="col-6 at dwnmed">
                                 Weather
                             </div>
                         </div>
@@ -124,8 +124,8 @@
 
                     <!--Current Heat-->
                     <div class="col robot px-0">
-                        <div class="row pt-5">
-                            <p class="col-10 ted text-end px-0 mb-0">
+                        <div class="row pt-5 pe-5">
+                            <p id="CurrentTemp" class="col-10 ted text-end px-0 mb-0">
                                 000°
                             </p>
 
@@ -136,10 +136,10 @@
                             </div>
 
                             <!--Min/Max Heat-->
-                            <div class="col-6 at text-end pb-4">
+                            <div id="TdayMax" class="col-6 at text-end pb-4">
                                 H:000°
                             </div>
-                            <div class="col-6 at">
+                            <div id="TdayMin" class="col-6 at">
                                 L:000°
                             </div>
                         </div>
@@ -155,13 +155,13 @@
                             Today
                         </p>
                         <img src="./assets/WhiteSun.png" class="img-fluid " width="100px" alt="">
-                        <p class="trd robol pt-5">
+                        <p id="DayOneWeather" class="trd robol pt-5">
                             Weather
                         </p>
-                        <p class="ft robob">
+                        <p id="DayOneMax" class="ft robob">
                             000°
                         </p>
-                        <p class="ft robol">
+                        <p id="DayOneMin" class="ft robol">
                             000°
                         </p>
                     </div>
@@ -171,13 +171,13 @@
                             Day2
                         </p>
                         <img src="./assets/WhiteSun.png" class="img-fluid " width="100px" alt="">
-                        <p class="trd robol pt-5">
+                        <p id="DayTwoWeather" class="trd robol pt-5">
                             Weather
                         </p>
-                        <p class="ft robob">
+                        <p id="DayTwoMax" class="ft robob">
                             000°
                         </p>
-                        <p class="ft robol">
+                        <p id="DayTwoMin" class="ft robol">
                             000°
                         </p>
                     </div>
@@ -187,13 +187,13 @@
                             Day3
                         </p>
                         <img src="./assets/WhiteSun.png" class="img-fluid " width="100px" alt="">
-                        <p class="trd robol pt-5">
+                        <p id="DayTreeWeather" class="trd robol pt-5">
                             Weather
                         </p>
-                        <p class="ft robob">
+                        <p id="DayTreeMax" class="ft robob">
                             000°
                         </p>
-                        <p class="ft robol">
+                        <p id="DayTreeMin" class="ft robol">
                             000°
                         </p>
                     </div>
@@ -203,13 +203,13 @@
                             Day4
                         </p>
                         <img src="./assets/WhiteSun.png" class="img-fluid " width="100px" alt="">
-                        <p class="trd robol pt-5">
+                        <p id="DayFourWeather" class="trd robol pt-5">
                             Weather
                         </p>
-                        <p class="ft robob">
+                        <p id="DayFourMax" class="ft robob">
                             000°
                         </p>
-                        <p class="ft robol">
+                        <p id="DayFourMin" class="ft robol">
                             000°
                         </p>
                     </div>
@@ -219,13 +219,13 @@
                             Day5
                         </p>
                         <img src="./assets/WhiteSun.png" class="img-fluid " width="100px" alt="">
-                        <p class="trd robol pt-5">
+                        <p id="DayFiveWeather" class="trd robol pt-5">
                             Weather
                         </p>
-                        <p class="ft robob">
+                        <p id="DayFiveMax" class="ft robob">
                             000°
                         </p>
-                        <p class="ft robol">
+                        <p id="DayFiveMin" class="ft robol">
                             000°
                         </p>
                     </div>
