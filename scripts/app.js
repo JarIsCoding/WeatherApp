@@ -1,4 +1,4 @@
-import {apikey,} from "./enviroment.js"
+import { apikey, } from "./enviroment.js"
 
 // IDs
 let UserInput = document.getElementById('UserInput');
@@ -7,6 +7,8 @@ let CurrentWeather = document.getElementById('CurrentWeather');
 let CurrentTemp = document.getElementById('CurrentTemp');
 let TdayMax = document.getElementById('TdayMax');
 let TdayMin = document.getElementById('TdayMin');
+
+let searchBtn = document.getElementById('searchBtn');
 
 // Forecast IDs
 let DayOneWeather = document.getElementById('DayOneWeather');
@@ -18,7 +20,7 @@ let DayTwoMin = document.getElementById('DayTwoMin');
 let DayTreeWeather = document.getElementById('DayTreeWeather');
 let DayTreeMax = document.getElementById('DayTreeMax');
 let DayTreeMin = document.getElementById('DayTreeMin');
-let DayFourWeather= document.getElementById('DayFourWeather');
+let DayFourWeather = document.getElementById('DayFourWeather');
 let DayFourMax = document.getElementById('DayFourMax');
 let DayFourMin = document.getElementById('DayFourMin');
 let DayFiveWeather = document.getElementById('DayFiveWeather');
@@ -47,7 +49,6 @@ function errorFunc(error) {
 
 //Current Weather Api Calls
 async function ApiCall(latitude, longitude) {
-    console.log(latitude);
     const promise = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apikey}&units=Imperial`)
 
     const data = await promise.json();
@@ -129,48 +130,76 @@ async function FiveDay(latitude, longitude) {
     DayFiveMin.textContent = `${Math.floor(data.list[25].main.temp_min)}°`
 }
 
-async function Geocode (){
-    const promise = await fetch (`http://api.openweathermap.org/geo/1.0/direct?q=${UserInput.value}&limit=5&appid=${apikey}`)
+async function Geocode() {
+    const promise = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${UserInput.value}&limit=5&appid=${apikey}`)
 
     const data = await promise.json();
 
-    searched = data;
+    UserInput.value.toLowerCase
+
+    let searchName = data[0].name
+    CurrentCity.textContent = searchName
 
     console.log(data);
 
-    return searched;
+    let searchLat = data[0].lat
+    let searchLon = data[0].lon
+    
+    ApiCall(searchLat, searchLon);
+    FiveDay(searchLat, searchLon);
 }
 
-function findLocation(){
-    let chosenLocation = UserInput.value.toLowerCase();
 
-    for (let i = 0; i < searched.length; i++){
-        let currentLocation = searched[i]
-
-
-        if(currentLocation.name.toLowerCase() === chosenLocation)
-        {
-            matchingLocation = currentLocation
-        }
-    }
-
-    if(matchingLocation){
-        CurrentCity.innerText = matchingLocation.name
-
-        CurrentTemp.innerText = matchingLocation.temp;
-
-        CurrentWeather.innerText = matchingLocation.weather[0];
-    }
-    else{
-        CurrentCity.innerText = '';
-    }
-}
-
-UserInput.addEventListener('keydown', function(event){
+UserInput.addEventListener('keydown', function (event) {
     if (event.key === 'Enter') {
-        findLocation();
+        Geocode(); 
     }
 })
+
+// async function Geocode (ChoseCity){
+//     const promise = await fetch (`http://api.openweathermap.org/geo/1.0/direct?q=${UserInput.value}&limit=5&appid=${apikey}`)
+
+//     const data = await promise.json();
+
+//     searched = data;
+
+//     let searchName = data
+//     let searchWeather
+//     let searchTemp
+//     let searchMax
+//     let searchMin
+
+//     console.log(data);
+
+//     return searched;
+// }
+
+// function findLocation(){
+//     let chosenLocation = UserInput.value.toLowerCase();
+
+//     for (let i = 0; i < searched.length; i++){
+//         let currentLocation = searched[i]
+
+
+//         if(currentLocation.name.toLowerCase() === chosenLocation)
+//         {
+//             matchingLocation = currentLocation
+//         }
+//     }
+
+//     if(matchingLocation){
+//         CurrentCity.innerText = matchingLocation.name
+
+//         CurrentTemp.innerText = matchingLocation.temp;
+
+//         CurrentWeather.innerText = matchingLocation.weather[0];
+//     }
+//     else{
+//         CurrentCity.innerText = '';
+//     }
+// }
+
+
 
 //Updates the APIs every 10 minutes
 setInterval(ApiCall, 600000);
@@ -178,4 +207,3 @@ setInterval(FiveDay, 601000);
 
 ApiCall();
 FiveDay();
-Geocode();
