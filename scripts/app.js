@@ -90,14 +90,14 @@ async function FiveDay(latitude, longitude) {
     console.log(data.list[0].main.temp_min)
 
 
-    console.log(data.list[1].weather[0].main)
-    DayTwoWeather.textContent = data.list[1].weather[0].main;
+    console.log(data.list[2].weather[0].main)
+    DayTwoWeather.textContent = data.list[2].weather[0].main;
 
-    console.log(data.list[1].main.temp_max)
-    DayTwoMax.textContent = `${Math.floor(data.list[1].main.temp_max)}°`
+    console.log(data.list[2].main.temp_max)
+    DayTwoMax.textContent = `${Math.floor(data.list[2].main.temp_max)}°`
 
-    console.log(data.list[1].main.temp_min)
-    DayTwoMin.textContent = `${Math.floor(data.list[1].main.temp_min)}°`
+    console.log(data.list[2].main.temp_min)
+    DayTwoMin.textContent = `${Math.floor(data.list[2].main.temp_min)}°`
 
 
     console.log(data.list[9].weather[0].main)
@@ -156,53 +156,9 @@ UserInput.addEventListener('keydown', function (event) {
     }
 })
 
-// async function Geocode (ChoseCity){
-//     const promise = await fetch (`http://api.openweathermap.org/geo/1.0/direct?q=${UserInput.value}&limit=5&appid=${apikey}`)
-
-//     const data = await promise.json();
-
-//     searched = data;
-
-//     let searchName = data
-//     let searchWeather
-//     let searchTemp
-//     let searchMax
-//     let searchMin
-
-//     console.log(data);
-
-//     return searched;
-// }
-
-// function findLocation(){
-//     let chosenLocation = UserInput.value.toLowerCase();
-
-//     for (let i = 0; i < searched.length; i++){
-//         let currentLocation = searched[i]
-
-
-//         if(currentLocation.name.toLowerCase() === chosenLocation)
-//         {
-//             matchingLocation = currentLocation
-//         }
-//     }
-
-//     if(matchingLocation){
-//         CurrentCity.innerText = matchingLocation.name
-
-//         CurrentTemp.innerText = matchingLocation.temp;
-
-//         CurrentWeather.innerText = matchingLocation.weather[0];
-//     }
-//     else{
-//         CurrentCity.innerText = '';
-//     }
-// }
-
-
-
 //Updates the APIs every 10 minutes
 setInterval(ApiCall, 600000);
+setInterval(Geocode, 600000);
 setInterval(FiveDay, 601000);
 
 ApiCall();
