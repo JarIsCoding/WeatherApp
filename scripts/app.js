@@ -24,6 +24,7 @@ let Day3Txt = document.getElementById("Day3Txt")
 let Day4Txt = document.getElementById("Day4Txt")
 let Day5Txt = document.getElementById("Day5Txt")
 let favBtnImg = document.getElementById("favBtnImg")
+let lastAddedElement = null;
 
 // Forecast IDs
 let DayOneWeather = document.getElementById('DayOneWeather');
@@ -264,7 +265,7 @@ async function FiveDay(latitude, longitude) {
 }
 
 async function Geocode() {
-    const promise = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${UserInput.value}&limit=5&appid=${apikey}`)
+    const promise = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${UserInput.value}&limit=5&appid=${apikey}`)
 
     const data = await promise.json();
 
@@ -290,6 +291,7 @@ UserInput.addEventListener('keydown', function (event) {
 })
 
 function favop(CName, CTemp, CMax, CMin, CWeather) {
+
     let p1 = document.createElement("p");
     p1.id = "favName"
     p1.className = "fut"
@@ -347,6 +349,7 @@ function favop(CName, CTemp, CMax, CMin, CWeather) {
     injectHere.appendChild(br);
     injectHere.appendChild(outerDiv);
     openclose(favName);
+    lastAddedElement = outerDiv;
 }
 
 function openclose(CurrentCity, favName) {
