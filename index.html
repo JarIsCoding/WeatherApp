@@ -21,75 +21,42 @@
                         class="inputcolor fut inputbox border border-dark-subtle rounded-4 border-5 robot">
                     <br>
                     <br>
-                    <br>
-                    <p class="trd">
+                    <p class="trd mt-3">
                         Favorites
                     </p>
                     <br>
 
                     <!--Favorite Selection-->
-                    <div class="row openColor rounded-4 robol ps-2 pe-2 mx-0">
-                        <div class="col-6 pt-3">
-                            <p class="fut">
-                                Location
-                            </p>
-                        </div>
-                        <div class="col pe-0">
-                            <p class="at">
-                                000°
-                            </p>
-                        </div>
-                        <div class="col-1 ps-0 pt-4 mx-0">
-                            <p class="ft">
-                                F
-                            </p>
-                        </div>
+                    <div id="injectHere">
+                        <div class="row openColor rounded-4 robol ps-2 pe-2 mx-0">
+                            <div class="col-6 pt-3">
+                                <p id="favName" class="fut">
+                                    Location
+                                </p>
+                            </div>
+                            <div class="col pe-0">
+                                <p class="at">
+                                    000°
+                                </p>
+                            </div>
+                            <div class="col-1 ps-0 pt-4 mx-0">
+                                <p class="ft">
+                                    F
+                                </p>
+                            </div>
 
 
-                        <div class="col-6">
-                            <p class="trd">
-                                Weather
-                            </p>
-                        </div>
-                        <div class="col-6">
-                            <p class="trd">
-                                H:000°
-                                L:000°
-                            </p>
-                        </div>
-                    </div>
-
-                    <br>
-
-                    <!--Second Favorite Location-->
-                    <div class="row closeColor rounded-4 robol ps-2 pe-2 mx-0">
-                        <div class="col-6 pt-3">
-                            <p class="fut">
-                                Location
-                            </p>
-                        </div>
-                        <div class="col pe-0">
-                            <p class="at">
-                                000°
-                            </p>
-                        </div>
-                        <div class="col-1 ps-0 pt-4 mx-0">
-                            <p class="ft">
-                                F
-                            </p>
-                        </div>
-
-
-                        <div class="col-6">
-                            <p class="trd">
-                                Weather
-                            </p>
-                        </div>
-                        <div class="col-6">
-                            <p class="trd">
-                                H:000°
-                                L:000°
-                            </p>
+                            <div class="col-6">
+                                <p class="trd">
+                                    Weather
+                                </p>
+                            </div>
+                            <div class="col-6">
+                                <p class="trd">
+                                    H:000°
+                                    L:000°
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -106,14 +73,16 @@
                                 Location
                             </div>
                             <div class="col pt-4 ps-4">
-                                <img src="./assets/kisspng-computer-icons-check-mark-royalty-free-true-or-false-5adb4ad8815827.9386544715243209845298.png"
-                                    height="75px" width="75px" class="img-fluid" alt="">
+                                <button id="favBtn" type="button" class="btn">
+                                    <img id="favBtnImg" src="./assets/Transparent.png" height="75px" width="75px"
+                                        class="img-fluid" alt="">
+                                </button>
                             </div>
 
-                            <div class="col-12 trd mx-0">Current day</div>
+                            <div id="Day1Txt" class="col-12 trd mx-0">Current day</div>
 
                             <!--Sun and Weather-->
-                            <div class="col-6"><img src="/assets/WhiteSun.png" width="310px" alt="White sun"
+                            <div class="col-6"><img id="CImg" src="/assets/WhiteSun.png" width="310px" alt="White sun"
                                     class="img-fluid pe-5 pt-5">
                             </div>
                             <div id="CurrentWeather" class="col-6 at dwnmed">
@@ -154,7 +123,7 @@
                         <p class="ft pt-3 pb-3">
                             Today
                         </p>
-                        <img src="./assets/WhiteSun.png" class="img-fluid " width="100px" alt="">
+                        <img id="Day1Img" src="./assets/WhiteSun.png" class="img-fluid " width="100px" alt="">
                         <p id="DayOneWeather" class="trd robol pt-5">
                             Weather
                         </p>
@@ -167,10 +136,10 @@
                     </div>
 
                     <div class="col">
-                        <p class="ft pt-3 pb-3">
+                        <p id="Day2Txt" class="ft pt-3 pb-3">
                             Day2
                         </p>
-                        <img src="./assets/WhiteSun.png" class="img-fluid " width="100px" alt="">
+                        <img id="Day2Img" src="./assets/WhiteSun.png" class="img-fluid " width="100px" alt="">
                         <p id="DayTwoWeather" class="trd robol pt-5">
                             Weather
                         </p>
@@ -183,10 +152,10 @@
                     </div>
 
                     <div class="col">
-                        <p class="ft pt-3 pb-3">
+                        <p id="Day3Txt" class="ft pt-3 pb-3">
                             Day3
                         </p>
-                        <img src="./assets/WhiteSun.png" class="img-fluid " width="100px" alt="">
+                        <img id="Day3Img" src="./assets/WhiteSun.png" class="img-fluid " width="100px" alt="">
                         <p id="DayTreeWeather" class="trd robol pt-5">
                             Weather
                         </p>
@@ -199,10 +168,10 @@
                     </div>
 
                     <div class="col">
-                        <p class="ft pt-3 pb-3">
+                        <p id="Day4Txt" class="ft pt-3 pb-3">
                             Day4
                         </p>
-                        <img src="./assets/WhiteSun.png" class="img-fluid " width="100px" alt="">
+                        <img id="Day4Img" src="./assets/WhiteSun.png" class="img-fluid " width="100px" alt="">
                         <p id="DayFourWeather" class="trd robol pt-5">
                             Weather
                         </p>
@@ -215,10 +184,10 @@
                     </div>
 
                     <div class="col">
-                        <p class="ft pt-3 pb-3">
+                        <p id="Day5Txt" class="ft pt-3 pb-3">
                             Day5
                         </p>
-                        <img src="./assets/WhiteSun.png" class="img-fluid " width="100px" alt="">
+                        <img id="Day5Img" src="./assets/WhiteSun.png" class="img-fluid " width="100px" alt="">
                         <p id="DayFiveWeather" class="trd robol pt-5">
                             Weather
                         </p>
